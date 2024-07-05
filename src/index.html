@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pac-Man</title>
+    <style>
+      #MyCanvas {
+        box-shadow: 10px 10px 20px black;
+      }
+      h1 {
+        text-align: center;
+        font-family: comic sans MS;
+        color: white;
+      }
+      p {
+        color: white;
+        font-family: comic sans MS;
+        margin-bottom: 5px;
+        text-align: right;
+      }
+
+      button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #ff0066;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: "Comic Sans MS", cursive;
+        text-transform: uppercase;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        background-color: #ff0044;
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      body {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(0deg, rgb(219, 219, 219) 0%, #3e69ff 100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Pac-Man</h1>
+      <button id="restartBtn">Restart</button>
+      <p id="scoreDisplay" class="score">Score:</p>
+      <canvas id="MyCanvas"></canvas>
+    </div>
+    <script src="./Game.js" type="module"></script>
+  </body>
+</html>
